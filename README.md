@@ -1,11 +1,5 @@
 # 0112 : TIL(TODAY I LEARNED)
 
-<aside>
-👩🏻‍💻 git : **분산** 버전 관리 프로그램
-github : git으로 관리되는 프로젝트, 폴더(directory) * GitHub Copilot
-
-</aside>
-
 - 절대경로 : 루트 디렉토리부터 목적 지점까지 거치는 모든 경로를 전부 작성
   - 윈도우 바탕화면의 절대 경로 C:\Users\ssafy\Desktop
 - 상대경로 : 현재 작업하고 있는 디렉토리를 기준으로 계산된 상대적 위치 작성
