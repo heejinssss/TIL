@@ -1,1 +1,1 @@
-# This is README. Thank you so much.
+# This is README. Thank you.
