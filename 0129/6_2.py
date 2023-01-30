@@ -5,9 +5,10 @@
 ["H","a","n","n","a","h"]
 ["h","a","n","n","a","H"]
 """
+s = ["h","e","l","l","o"]
 
-def reversing(words = input()):
-    new_words = words[0] + (words[-2:-len(words):-1]) + words[len(words)-1]
-    return new_words
+def reverseString(s):
+    new_s = list(reversed(s))
+    return new_s
     
-print(reversing())
+print(reverseString(s))
