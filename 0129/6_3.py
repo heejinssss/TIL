@@ -30,10 +30,9 @@ words = paragraph.split(' ')
 
 
 while True:
-    for ban in banned:
-        for word in words:
-            if ban in word:
-                words.remove(word)
+    for ban, word in banned, words:
+        if ban in words:
+            words.replace(words,'')
 
 words = ' '.join(words).split()
 
