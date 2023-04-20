@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app"></div>
+
+  <script>
+    // div#app 요소 선택
+    const div = document.querySelector('div#app')
+    // h1 태그를 createElement 로 생성
+    const title = document.createElement('h1')
+    // 생성한 h1태그의 내용을 '오늘의 Todo' 로 설정
+    title.innerText = '오늘의 Todo'
+    div.appendChild(title)
+    // ul, li 태그들을 생성 및 내용 추가
+    const brushing = document.createElement('li')
+    brushing.innerText = '양치하기'
+    const studying = document.createElement('li')
+    studying.innerText = '공부하기'
+    const breaking = document.createElement('li')
+    breaking.innerText = '휴식하기'
+    // 각 태그들을 적절하기 div#app 요소에 자식요소로 추가. (#app > ul > li)
+    div.appendChild(brushing)
+    div.appendChild(studying)
+    div.appendChild(breaking)
+  </script>
+</body>
+
+</html>
