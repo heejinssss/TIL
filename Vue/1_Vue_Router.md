@@ -1,8 +1,10 @@
 # Vue Router
 
+# Vue Router
+
 ## 💡 UX & UI
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled.png)
+![UX & UI](https://user-images.githubusercontent.com/122508547/237016670-ef887ace-19e6-4c31-9a97-197935b00b6e.png)
 
 ### UX (User Experience)
 
@@ -96,7 +98,7 @@
 
 **Routing in SPA / CSR**
 
-- 서버는 하나의 HTML(index.html)만을 제공
+- 서버는 하나의 HTML(`index.html`)만을 제공
 - 이후에 모든 동작은 하나의 HTML 문서 위에 JavaScript 코드를 활용
 - DOM을 그리는데 필요한 추가적인 데이터가 있다면 axios와 같은 AJAX 요청을 보낼 수 있는 도구를 사용하여 데이터를 가져오고 처리
 - 즉, 하나의 URL만 가질 수 있음
@@ -146,13 +148,13 @@ $ vue add router
 
 `router-link` 요소 및 `router-view`가 추가됨
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%201.png)
+![1](https://user-images.githubusercontent.com/122508547/237016633-872b6bf5-af6f-4df8-bb0c-1e4db8163138.png)
 
 ### `router-link`
 
 - `a` 태그와 비슷한 기능 → URL을 이동시킴
     - routes에 등록된 컴포넌트와 매핑됨
-    - 히스토리 모드에서 `router-link`는 클릭 이벤트를 차단하여 a 태그와 달리 브라우저가 페이지를 다시 로드하지 않도록 함
+    - 히스토리 모드에서 `router-link`는 클릭 이벤트를 차단하여 `a` 태그와 달리 브라우저가 페이지를 다시 로드하지 않도록 함
 - 목표 경로는 `to` 속성으로 지정됨
 - 기능에 맞게 HTML에서 `a` 태그로 rendering 되지만, 필요에 따라 다른 태그로 바꿀 수 있음
 
@@ -171,7 +173,8 @@ $ vue add router
 - Django에서의 `urls.py`에 해당
 - routes에 URL과 컴포넌트를 매핑
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%202.png)
+![2](https://user-images.githubusercontent.com/122508547/237016638-f24fdb62-11e5-4384-9908-7b426bb1a0fd.png)
+
 
 ```bash
 ## Django/urls.py
@@ -183,7 +186,7 @@ urlpatterns = [
 
 ### `src/Views`
 
-- router-view에 들어갈 component 작성
+- `router-view`에 들어갈 component 작성
 - 컴포넌트를 두 폴더로 나누어 작성
 - 각 폴더 안의 `.vue` 파일들이 기능적으로 다른 것은 아님
 - `**views/**`
@@ -200,23 +203,23 @@ urlpatterns = [
 
 **선언적 방식 네비게이션 (1/2)**
 
-- router-link의 `to` 속성으로 주소 전달
+- `router-link`의 `to` 속성으로 주소 전달
 - routes에 등록된 주소와 매핑된 컴포넌트로 이동
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%203.png)
+![3](https://user-images.githubusercontent.com/122508547/237016642-a4478c34-457c-4be9-8d22-327c937acda3.png)
 
 **Named Routes**
 
 - 이름을 가지는 routes
 - Django에서 path 함수의 name 인자의 활용과 같은 방식
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%201.png)
+![4](https://user-images.githubusercontent.com/122508547/237016644-993fa539-464d-47f6-bf05-91ad4829100f.png)
 
 **선언적 방식 네비게이션 (2/2)**
 
-동적인 값을 사용하기 때문에 v-bind를 사용해야 정상적으로 작동
+동적인 값을 사용하기 때문에 `v-bind`를 사용해야 정상적으로 작동
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%204.png)
+![5](https://user-images.githubusercontent.com/122508547/237016647-7a85e931-e7d4-4e30-94d9-af4fdbedcbce.png)
 
 **프로그래밍 방식 네비게이션(1/2)**
 
@@ -226,7 +229,7 @@ urlpatterns = [
     - history stack에 기록이 남기 때문에 사용자가 브라우저의 두로 가기 버튼을 클릭하면 이전 URL로 이동할 수 있음
 - 결국 `<router-link :to="...">`를 클릭하는 것과 `$router.push(...)`를 호출하는 것은 같은 동작
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%205.png)
+![6](https://user-images.githubusercontent.com/122508547/237016649-52071752-a66b-4d5f-9b72-74d8fec46972.png)
 
 ### Dynamic Route Matching
 
@@ -236,32 +239,33 @@ urlpatterns = [
 
 ▼ `HelloView.vue` 작성 및 route 추가 (route를 추가할 때 동적 인자를 명시)
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%206.png)
+![7](https://user-images.githubusercontent.com/122508547/237016652-4c7d6afa-c900-4a3e-b314-af5d07e8687d.png)
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%207.png)
+
+![8](https://user-images.githubusercontent.com/122508547/237016654-71e5787b-1541-489d-9bf0-ecf20df7cf4c.png)
 
 ▼ `$route.params`로 변수에 접근 가능
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%208.png)
+![9](https://user-images.githubusercontent.com/122508547/237016655-ab57f1dd-1ab1-49da-b1f2-8de77fb2cf80.png)
 
 ▼ 다만 HTML에서 직접 사용하기보다는 data에 넣어서 사용하는 것을 권장
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%209.png)
+![10](https://user-images.githubusercontent.com/122508547/237016656-685ef6fd-d197-49c9-b059-99d34df45d88.png)
 
 ### Dynamic Route Matching - 선언전 방식 네비게이션
 
-- `App.vue`에서 heejin에게 인사하는 페이지로 이동해보기
+- `App.vue`에서 ‘heejin’에게 인사하는 페이지로 이동해보기
 - `params`를 이용하여 동적 인자 전달 가능
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%2010.png)
+![11](https://user-images.githubusercontent.com/122508547/237016660-3d5f17b5-fa7b-4c45-afc7-d990a26e23ae.png)
 
 ### Dynamic Route Matching - 프로그래밍 방식 네비게이션 (1/2)
 
 AboutView에서 데이터를 입력받아 HelloView로 이동하여 입력받은 데이터에게 인사하기
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%2011.png)
+![12](https://user-images.githubusercontent.com/122508547/237016661-f7199ee4-58dc-4d79-9e23-ccb14c036d02.png)
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%2012.png)
+![13](https://user-images.githubusercontent.com/122508547/237016663-ebd3b40f-3ed7-4c16-a16c-1fc943dd1aed.png)
 
 ### route에 컴포넌트를 등록하는 또다른 방법
 
@@ -269,7 +273,7 @@ AboutView에서 데이터를 입력받아 HelloView로 이동하여 입력받은
 
 1️⃣ 기존 방식
 
-![Untitled](Vue%20Router%205f35ee9b94464c08bbfb6fde13c54f97/Untitled%2013.png)
+![14](https://user-images.githubusercontent.com/122508547/237016666-4130aca5-f5f3-41bf-93af-c61f4ae0f703.png)
 
 2️⃣ Lazy-loading
 
