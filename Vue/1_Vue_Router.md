@@ -1,7 +1,5 @@
 # Vue Router
 
-# Vue Router
-
 ## 💡 UX & UI
 
 ![UX & UI](https://user-images.githubusercontent.com/122508547/237016670-ef887ace-19e6-4c31-9a97-197935b00b6e.png)
